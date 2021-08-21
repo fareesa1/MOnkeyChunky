@@ -5,15 +5,10 @@ import {
   StyleSheet,
   TextInput,
   Button,
-  TouchableOpacity,
+  TouchableOpacity, ImageBackground
 } from 'react-native';
 import Constants from 'expo-constants';
 import data from './localdb';
-
-// You can import from local files
-import AssetExample from './components/AssetExample';
-
-// or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 import { Image } from 'react-native-elements';
 import { Audio } from 'expo-av';
@@ -36,6 +31,7 @@ class PhonicSound extends React.Component {
   render() {
     return (
       <TouchableOpacity
+      
         onPress={() => {
           this.playSound();
         }}
@@ -58,7 +54,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ImageBackground source= {require("./assets/images.jpg")} style={styles.container}>
         <Text style={styles.paragraph}>Monkey Chunky APP</Text>
         <Image
           source={{
@@ -93,7 +89,7 @@ this.state.word = this.state.word.toLowerCase().trim()
           })}
         </View>
         <Text>{this.state.chunks}</Text>
-      </View>
+      </ImageBackground>
     );
   }
 }
