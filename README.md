@@ -5,3 +5,6 @@ They can then join the chunks to pronounce a word🍞🚗
 
 
 The app is created with react native, using the components like header, text, textInput, Button and a local db that STORES the chunks and phones of words.
+
+it also has navigation added from homeScreen to the introScreen.
+
